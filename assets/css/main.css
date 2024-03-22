@@ -318,6 +318,7 @@ button {
 .features {
   padding-block: var(--spacing-extra);
   background-color: var(--light-grayish-blue);
+  min-height: 100vh;
 }
 
 .features .wrapper {
@@ -363,4 +364,62 @@ button {
   display: block;
   width: 25ch;
   color: var(--grayish-blue);
+}
+
+.articles {
+  background-color: var(--white);
+  padding-block: var(--spacing-extra);
+  min-height: 100vh;
+}
+
+.articles .wrapper {
+  display: grid;
+  gap: var(--spacing-medium);
+}
+
+.articles-headline {
+  color: var(--dark-blue);
+  font-size: 2rem;
+  font-weight: var(--fw-light);
+}
+
+.articles-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing);
+}
+
+.article-card {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--spacing);
+}
+
+.article-image {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: var(--spacing-small);
+  border-top-right-radius: var(--spacing-small);
+}
+
+.article-card header {
+  display: grid;
+  gap: var(--spacing-small);
+  padding: var(--spacing);
+}
+
+.article-author {
+  font-size: 0.6rem;
+  color: var(--grayish-blue);
+}
+
+.article-headline {
+  color: var(--dark-blue);
+  font-size: var(--fs-18);
+  font-weight: var(--fw-regular);
+}
+
+.article-copy {
+  color: var(--grayish-blue);
+  font-size: 1rem;
 }
