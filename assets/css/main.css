@@ -8,7 +8,6 @@
   --fw-regular: 400;
   --fw-bold: 700;
 
-
   /*COLORS*/
   --dark-blue: hsl(233, 26%, 24%);
   --lime-green: hsl(136, 65%, 51%);
@@ -21,8 +20,11 @@
   /*EFFECTS*/
   --right-gradient: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
   --dark-blue-faded: hsla(233, 26%, 24%, 80%);
+
+  /* TRANSITIONS */
   --transition: transform 0.5s ease-in-out;
 
+  /* SPACES */
   --spacing-small: 0.5rem;
   --spacing: 1.5rem;
   --spacing-medium: 2rem;
@@ -153,6 +155,9 @@ button {
   color: var(--light-grayish-blue);
   font-size: 1rem;
   font-weight: var(--fw-bold);
+}
+button:hover {
+  filter: opacity(0.8) brightness(1.5);
 }
 .hamburger-menu {
   --hamburger-height: 1.5rem;
@@ -290,9 +295,7 @@ button {
 }
 
 
-
 /*HERO image here*/
-
 
 
 .copy-image {
@@ -301,13 +304,11 @@ button {
   border: 1px solid black;
   width: 100%;
 }
-
 .copy-image > * {
   display: block;
   height: 100%;
   width: 100%;
 }
-
 .image-bg-mobile,.image-bg-desktop, .image-mockups {
   display: none;
 }
@@ -326,7 +327,6 @@ button {
     padding-block: var(--spacing-big);
   }
 }
-
 @media screen and (max-width: 27rem) {
   .hero-headline {
     font-size: 2.5rem;
@@ -388,7 +388,13 @@ button {
   color: var(--grayish-blue);
 }
 
-@media screen and (max-width: 55rem) {
+@media screen and (max-width: 70rem) {
+  .features-cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 40rem) {
   .features-cards {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
@@ -444,20 +450,30 @@ button {
   padding: var(--spacing);
 }
 .article-author {
-  font-size: 0.6rem;
   color: var(--grayish-blue);
+  font-size: 0.6rem;
 }
 .article-headline {
   color: var(--dark-blue);
   font-size: var(--fs-18);
   font-weight: var(--fw-regular);
+  cursor: pointer;
+}
+.article-headline:hover {
+  color: var(--lime-green);
 }
 .article-copy {
   color: var(--grayish-blue);
   font-size: 1rem;
 }
 
-@media screen and (max-width: 55rem) {
+@media screen and (max-width: 70rem) {
+  .articles-cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 40rem) {
   .articles-cards {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
@@ -472,6 +488,93 @@ footer {
   background-color: var(--dark-blue);
 }
 
-footer .social-links {
+footer .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
   
+  gap: var(--spacing);
+  padding-block: var(--spacing-big);
+
+  grid-template-areas: 
+  "logo         page-links  button"
+  "...          page-links  ..."
+  "social-links page-links  legal"
+  ;
+}
+footer .logo {
+  grid-area: logo;
+}
+footer .social-links {
+  grid-area: social-links;
+  display: flex;
+  gap: var(--spacing);
+  color: var(--white);
+}
+footer ul li a:hover {
+  color: var(--lime-green);
+}
+.icon {
+  fill: var(--white);
+}
+footer ul li a:hover .icon {
+  fill: var(--lime-green);
+}
+footer .page-links {
+  grid-area: page-links;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: var(--spacing-small);
+  color: var(--white);
+}
+footer button {
+  grid-area: button;
+  justify-self: end;
+}
+footer .legal {
+  grid-area: legal;
+  color: var(--grayish-blue);
+  justify-self: end;
+  text-align: end;
+}
+
+@media screen and (max-width: 58rem) {
+  footer .page-links {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  footer .wrapper {
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    place-items: center;
+
+    gap: var(--spacing);
+    padding-block: var(--spacing-big);
+    padding-inline: var(--spacing);
+    
+    grid-template-areas: 
+    "logo"
+    "social-links"
+    "page-links"
+    "button"
+    "legal"
+    ;
+  }
+  footer .page-links {
+    gap: var(--spacing);
+    text-align: center;
+  }
+  footer button {
+    justify-self: center;
+  }
+  footer .legal {
+
+    justify-self: center;
+    text-align: center;
+  }
 }
