@@ -92,13 +92,13 @@ To run this project, simply download the files and open the "index.html" file wi
 
 **Desktop:**
 
-![Desktop screen recording](./screenshots/screenrecord-desktop.gif)
+![Desktop screen recording](./design/screenrecord-desktop.gif)
 
 ---
 
 **Mobile:**
 
-![Mobile screen recording](./screenshots/screenrecord-mobile.gif)
+![Mobile screen recording](./design/screenrecord-mobile.gif)
 
 ---
 
