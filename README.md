@@ -37,13 +37,25 @@ This challenge focuses mostly on HTML & CSS. The original challenge can be found
 
 **Desktop page design:**
 
-![Desktop page design](./design/screenrecord-desktop.gif)
+![Desktop page design](./design/desktop-design.jpg)
+
+---
+
+**Desktop page active states:**
+
+![Desktop page design](./design/active-states.jpg)
 
 ---
 
 **Mobile page:**
 
-![Mobile page](./design/screenrecord-mobile.gif)
+![Mobile page](./design/mobile-design.jpg)
+
+---
+
+**Mobile menu:**
+
+![Mobile page](./design/mobile-navigation.jpg)
 
 ---
 
